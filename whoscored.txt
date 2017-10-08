@@ -1,0 +1,308 @@
+##
+# Próximos jogos
+# Url: https://www.whoscored.com/LiveScores
+# Tipo de coleta: Ajax
+# Url Ajax: https://www.whoscored.com/matchesfeed/?d=yyyymmdd
+# Será possível coletar os próximos jogos de um dia qualquer.
+##
+partidas: {
+	tournament: {
+		string: nome_tournament,
+		date: data,
+		time: hora,
+		jogo: {
+			time_casa: {
+				string: nome_time
+			},
+			time_fora: {
+				string: nome_time
+			}
+		}
+	}
+}
+
+##
+# Informação do torneio
+# Url: https://www.whoscored.com/Regions/31/Tournaments/95/Seasons/6700/Stages/14746/TeamStatistics
+# Tipo de coleta: Ajax
+# Urls Ajax: https://www.whoscored.com/StatisticsFeed/1/GetTeamStatistics?category=shots&subcategory=zones&statsAccumulationType=0&field=&tournamentOptions=&timeOfTheGameStart=0&timeOfTheGameEnd=5&teamIds=&stageId=14746&sortBy=Rating&sortAscending=&page=1&numberOfTeamsToPick=&isCurrent=true&formation=
+https://www.whoscored.com/stagestatfeed/14746/stageteams/?against=0&field=2&teamId=-1&type=6
+##
+{
+	torneio: {
+		estatisticas_do_time: {
+			#MESMA estatistica_detalhada_1 DO JOGADOR POREM COM OS DADOS DE TODOS OS JOGADORES DO TIME
+		},
+		estatistica_posicionais_do_time: {
+			time: {
+				string: nome,
+				em_casa: {
+					lado_do_ataque: {
+						float: ataque_pelo_lado_esquerdo,
+						float: ataque_pelo_lado_direito,
+						float: ataque_pelo_centro
+					},
+					direcao_de_chute_ao_gol: {
+						float: chute_pela_a_esquerda,
+						float: chute_pelo_meio,
+						float: chute_pela_direita
+					},
+					posicao_do_chute_no_campo: {
+						float: dentro_da_area_de_6_yards,
+						float: dentro_da_area_de_penalti,
+						float: fora_da_area_de_penalti
+					},
+					area_de_acao: {
+						float: no_seu_um_terço_do_campo,
+						float: no_meio_do_campo,
+						float: no_um_terço_do_oponente
+					}
+				},
+				fora_de_casa: {
+					#MESMO QUE 'em_casa'
+				}
+			}
+		}
+	}
+}
+
+##
+# Informações do time
+# Url: https://www.whoscored.com/Teams/id
+# Tipo de Coleta: Ajax
+# POSSUI ESTATISTICAS SEMELHANTES AO DO JOGADOR, APENAS NO AMBITO DO TIME INTEIRO.
+## 
+
+##
+# Informações do jogador
+# Url: https://www.whoscored.com/Players/id
+# Tipo de Coleta: Ajax e HTML simples
+# Url Ajax: https://www.whoscored.com/StatisticsFeed/1/GetPlayerStatistics?category=cards&subcategory=type&statsAccumulationType=2&isCurrent=true&playerId=130841&teamIds=&matchId=&stageId=&tournamentOptions=&sortBy=Rating&sortAscending=&age=&ageComparisonType=0&appearances=&appearancesComparisonType=0&field=&nationality=&positionOptions=%27FW%27,%27AML%27,%27AMC%27,%27AMR%27,%27ML%27,%27MC%27,%27MR%27,%27DMC%27,%27DL%27,%27DC%27,%27DR%27,%27GK%27,%27Sub%27&timeOfTheGameEnd=5&timeOfTheGameStart=0&isMinApp=&page=1&includeZeroValues=true&numberOfPlayersToPick=
+##
+jogador: {
+	info_basica: {
+		string: nome,
+		string: time_atual,
+		float: numero_camisa_atual,
+		string: posição_atual,
+		float: idade,
+		float: altura (cm)
+		float: peso (kg)
+		string: nacionalidade
+	}
+	#ESTATISTICAS POR TORNEIO (ANO CORRENTE)
+	# TAMBEM É POSSIVEL PEGAR ESTAS ESTATISTICAS PARA OUTROS ANOS, PORÉM SENDO POR TIME, AO INVÉS DE POR TORNEIO
+	estatisticas_detalhadas_1: {
+		por_torneio: {
+			float: tempo_em_campo,
+			float: nota_rank,
+			float: numero_de_jogos_jogados, (?) (Não tenho certeza)
+			defesa: {
+				tackle (subcategoria=sucesso): {
+					float: com_sucesso,
+					float: em_que_foi_diblado,
+					float: total
+				},
+				interceptação (subcategoria=sucesso): {
+					float: total
+				},
+				faltas (subcategoria=tipo): {
+					float: sofridas,
+					float: cometidas
+				},
+				cartoes (subcategoria=tipo): {
+					float: vermelhor,
+					float: amarelo
+				},
+				offsides (subcategoria=tipo): {
+					float: total
+				},
+				clearances (subcategoria=sucesso): {
+					float: total
+				},
+				bloqueio (subcategoria=tipo): {
+					float: chutes_bloqueados,
+					float: passes_bloqueados,
+					float: cruzamentos_bloquedos
+				},
+				salvamentos (subcategoria=zona_do_campo): {
+					float: total,
+					float: linha_six_yard,
+					float: area_de_penalti,
+					float: fora_da_area
+				}
+			},
+			ataque: {
+				chutes (subcategoria=zona_do_campo): {
+					float: total,
+					float: linha_six_yard,
+					float: area_de_penalti,
+					float: fora_da_area
+				},
+				chutes (subcategoria=acuracidade): {
+					float: total,
+					float: erros_no_alvo,
+					float: acertos_no_alvo,
+					float: bloqueados,
+					float: onPost (?)
+				},
+				chutes (subcategoria=partes_do_corpo): {
+					float: total,
+					float: com_perna_esquerda,
+					float: com_perna_direita,
+					float: cabeca
+				},
+				gols (subcategoria=zona_do_campo): {
+					float: total,
+					float: linha_six_yard,
+					float: area_de_penalti,
+					float: fora_da_area
+				},
+				gols (subcategoria=partes_do_corpo): {
+					float: total,
+					float: com_perna_esquerda,
+					float: com_perna_direita,
+					float: cabeca
+				},
+				dribles (subcategoria=sucesso): {
+					float: total,
+					float: com_sucesso,
+					float: sem_sucesso
+				},
+				perda_de_bola (subcategoria=tipo): {
+					float: controle_ruim_da_bola,
+					float: bola_roubada_por_oponente
+				},
+				duelos_de_cabeca (subcategoria=sucesso): {
+					float: total,
+					float: vencidos,
+					float: perdidos
+				}
+			},
+			passes: {
+				passes (subcategoria=distancia): {
+					float: total,
+					float: passes_longos_imprecisos,
+					float: passes_longos_precisos,
+					float: passes_curtos_imprecisos,
+					float: passes_curtos_precisos
+				},
+				passes (subtcategoria=tipo): {
+					float: passes_cruzados_imprecisos,
+					float: passes_cruzados_precisos,
+					float: chutes_escanteio_imprecisos,
+					float: chutes_escanteio_precisos,
+					float: chutes_livres_imprecisos,
+					float: chutes_livres_precisos
+				}
+				passes_chave (subcategoria=distancia): {
+					float: total,
+					float: longos,
+					float: curtos
+				},
+				passes_chave (subcategoria=tipo): {
+					float: passes_cruzados_imprecisos,
+					float: passes_cruzados_precisos,
+					float: chutes_escanteio_imprecisos,
+					float: chutes_escanteio_precisos,
+					float: chutes_livres_imprecisos,
+					float: chutes_livres_precisos
+				}
+				assistencias (subcategoria=tipo): {
+					float: total,
+					float: cruzemento,
+					float: escanteio,
+					float: chutes_livres,
+					float: arremeços,
+					float: outros_nao_especificados
+				}
+			}
+		},
+		por_todos_os_torneios: {
+			MESMO DO TORNAMENTO, POREM TOTAL DE TODOS OS TOURNAMENTS QUE O JOGADOR PARTICIPOU.
+		}
+	},
+	#ESTATISTICAS POR PARTIDA PARTICIPADA
+	estatisticas_detalhadas_2: {
+		partida_que_jogou_em_casa: {
+			date: data,
+			string: time_oponente,
+			string: sua_posição
+			float: tempo_em_jogo,
+			float: nota_de_rank,
+			defensivo: {
+				float: tackles_de_sucesso,
+				float: interceptações,
+				float: faltas_cometidas,
+				float: offside_de_sucesso,
+				float: clerances,
+				float: foi_driblado_qtd,
+				float: bloqueou_chutes_qtd,
+				float: gols_contra
+			},
+			ofensivo: {
+				float: gols,
+				float: assistencias,
+				float: chutes, (provavelmente chute a gol)
+				float: passes_chave,
+				float: dribles_feitos_com_sucesso,
+				float: pego_em_offside,
+				float: perda_de_bola,
+				float: controle_ruim_da_bola
+			},
+			passes: {
+				float: total_de_passes,
+				float: porcentagem_de_passos_de_sucesso,
+				float: passos_cruzados_precisos,
+				float: passos_longos_precisos,
+				float: through_balls_precisos
+			}
+		},
+		partida_jogada_fora: {
+			MESMO QUE partida_que_jogou_em_casa
+		}
+	}
+	#Breves descrições (padronizadas) sobre pontos positivos e negativos do jogador.
+	pontos_fortes_e_fracos: {
+		fortes: {
+			string: descricao_do_ponto_forte,
+			string: tipo_do_ponto (se ataque ou defesa),
+			float: intensidade_do_ponto
+		},
+		fracos: {
+			string: descricao_do_ponto_forte,
+			string: tipo_do_ponto (se ataque ou defesa),
+			float: intensidade_do_ponto
+		}
+	},
+	#Como o jogador se comporta no campo.
+	estilo_de_jogo: {
+		string: descricao_de_um_tipo_de_comportamento,
+		string: tipo_da_descricao (se é de ataque ou defesa)
+	},
+	ultimas_partidas_que_jogador_jogou: {
+		partida: {
+			string: tournament,
+			date: data_do_jogo,
+			time_casa: {
+				string: nome,
+				float: gols
+			},
+			time_fora: {
+				string: nome,
+				float: gols
+			},
+			boolean: levou_cartao_amarelo,
+			boolean: levou_cartao_vermelho,
+			float: quantos_gols_fez,
+			float: quanto_tempo_jogou,
+			float: seu_rank_da_partida
+		}
+	}
+}
+
+##
+# Partida (Live)
+# Não fiz ainda.
+#
+##
