@@ -1,0 +1,354 @@
+Modelo de Estrutura de Dados
+
+tb_country
+id_country
+name_country
+
+############################################################################
+
+tb_city
+id_city
+name_city
+id_country
+latitude
+longitude
+altitude
+
+############################################################################
+
+tb_league
+id_league
+id_country
+name_league
+
+Extrair do sportstats.com
+
+############################################################################
+
+tb_team
+id_team
+id_country
+name_team
+nick1_team
+nick2_team
+nick3_team
+
+Extrair do sportstats.com
+
+############################################################################
+
+tb_team_statistics
+id_team
+id_league
+season
+num_match => Número de Partidas
+num_match_home => Número de Partidas em Casa
+num_match_away => Número de Partidas Fora
+total_full_time_result_win => Total de Vitórias (Jogo Inteiro)
+total_full_time_result_home_win => Total de Vitórias em Casa (Jogo Inteiro)
+total_full_time_result_away_win => Total de Vitórias Fora (Jogo Inteiro)
+total_full_time_result_lose => Total de Derrotas (Jogo Inteiro)
+total_full_time_result_home_lose => Total de Derrotas em Casa (Jogo Inteiro)
+total_full_time_result_away_lose => Total de Derrotas Fora (Jogo Inteiro)
+total_full_time_result_draw => Total de Empates (Jogo Inteiro)
+total_full_time_result_draw_home => Total de Empates em Casa (Jogo Inteiro)
+total_full_time_result_draw_away => Total de Empates Fora (Jogo Inteiro)
+total_half_time_result_win => Total de Vitórias (Metade do Jogo)
+total_half_time_result_home_win => Total de Vitórias em Casa (Metade do Jogo)
+total_half_time_result_away_win => Total de Vitórias Fora (Metade do Jogo)
+total_half_time_result_lose => Total de Derrotas (Metade do Jogo)
+total_half_time_result_home_lose => Total de Derrotas em Casa (Metade do Jogo)
+total_half_time_result_away_lose => Total de Derrotas Fora (Metade do Jogo)
+total_half_time_result_draw => Total de Empates (Metade do Jogo)
+total_half_time_result_draw_home => Total de Empates em Casa (Metade do Jogo)
+total_half_time_result_draw_away => Total de Empates Fora (Metade do Jogo)
+total_full_time_goals_pro = Total de Gols Pró (Jogo Inteiro)
+total_full_time_goals_pro_home => Total de Gols Pró em Casa (Jogo Inteiro)
+total_full_time_goals_pro_away => Total de Gols Pró Fora (Jogo Inteiro)
+avg_full_time_goals_pro = Média de Gols Pró (Jogo Inteiro)
+avg_full_time_goals_pro_home = Média de Gols Pró em Casa (Jogo Inteiro)
+avg_full_time_goals_pro_away = Média de Gols Pró Fora (Jogo Inteiro)
+total_full_time_goals_contra = Total de Gols Contra (Jogo Inteiro)
+total_full_time_goals_contra_home => Total de Gols Contra em Casa (Jogo Inteiro)
+total_full_time_goals_contra_away => Total de Gols Contra Fora (Jogo Inteiro)
+avg_full_time_goals_contra = Média de Gols Contra (Jogo Inteiro)
+avg_full_time_goals_contra_home = Média de Gols Contra em Casa (Jogo Inteiro)
+avg_full_time_goals_contra_away = Média de Gols Contra Fora (Jogo Inteiro)
+total_half_time_goals_pro = Total de Gols Pró (Metade do Jogo)
+total_half_time_goals_pro_home => Total de Gols Pró em Casa (Metade do Jogo)
+total_half_time_goals_pro_away => Total de Gols Pró Fora (Metade do Jogo)
+avg_half_time_goals_pro = Média de Gols Pró (Metade do Jogo)
+avg_half_time_goals_pro_home = Média de Gols Pró em Casa (Metade do Jogo)
+avg_half_time_goals_pro_away = Média de Gols Pró Fora (Metade do Jogo)
+total_half_time_goals_contra = Total de Gols Contra (Metade do Jogo)
+total_half_time_goals_contra_home => Total de Gols Contra em Casa (Metade do Jogo)
+total_half_time_goals_contra_away => Total de Gols Contra Fora (Metade do Jogo)
+avg_half_time_goals_contra = Média de Gols Contra (Metade do Jogo)
+avg_half_time_goals_contra_home = Média de Gols Contra em Casa (Metade do Jogo)
+avg_half_time_goals_contra_away = Média de Gols Contra Fora (Metade do Jogo)
+total_full_time_shots => Total de Chutes (Jogo Inteiro)
+avg_full_time_shots => Média de Chutes (Jogo Inteiro)
+avg_full_time_shots_home => Média de Chutes em Casa (Jogo Inteiro)
+avg_full_time_shots_away => Média de Chutes Fora (Jogo Inteiro)
+total_full_time_assists => Total de Assitências (Jogo Inteiro)
+avg_full_time_assists => Média de Assitências (Jogo Inteiro)
+avg_full_time_assists_home => Média de Assitências em Casa (Jogo Inteiro)
+avg_full_time_assists_away => Média de Assitências Fora (Jogo Inteiro)
+total_full_time_corner_kick => Total de Escanteios (Jogo Inteiro)
+avg_full_time_corner_kick => Média de Escanteios (Jogo Inteiro)
+avg_full_time_corner_kick_home => Média de Escanteios em Casa (Jogo Inteiro)
+avg_full_time_corner_kick_away => Média de Escanteios Fora (Jogo Inteiro)
+total_full_time_fouls_offsides => Total de faltas recebidas (Jogo Inteiro)
+avg_full_time_fouls_offsides => Média de faltas recebidas (Jogo Inteiro)
+avg_full_time_fouls_offsides_home => Média de faltas recebidas em Casa (Jogo Inteiro)
+avg_full_time_fouls_offsides_away => Média de faltas recebidas Fora (Jogo Inteiro)
+total_full_time_fouls_committed => Total de faltas cometidas (Jogo Inteiro)
+avg_full_time_fouls_committed => Média de faltas cometidas (Jogo Inteiro)
+avg_full_time_fouls_committed_home => Total de faltas cometidas em Casa (Jogo Inteiro)
+avg_full_time_fouls_committed_away => Total de faltas cometidas Fora (Jogo Inteiro)
+total_full_time_yellow_card => Total de cartões amarelos (Jogo Inteiro)
+avg_full_time_yellow_card => Média de cartões amarelos (Jogo Inteiro)
+avg_full_time_yellow_card_home => Média de cartões amarelos em Casa (Jogo Inteiro)
+avg_full_time_yellow_card_away => Média de cartões amarelos Fora (Jogo Inteiro)
+total_full_time_red_card => Total de cartões vermelhos (Jogo Inteiro)
+avg_full_time_red_card => Média de cartões vermelhos (Jogo Inteiro)
+avg_full_time_red_card_home => Média de cartões vermelhos em Casa (Jogo Inteiro)
+avg_full_time_red_card_away => Média de cartões vermelhos Fora (Jogo Inteiro)
+total_full_time_free_kick => Total de Chute Livre (Falta Perigosa) (Jogo Inteiro)
+avg_full_time_free_kick => Média de Chute Livre (Falta Perigosa) (Jogo Inteiro)
+avg_full_time_free_kick_home => Média de Chute Livre em Casa (Falta Perigosa) (Jogo Inteiro)
+avg_full_time_free_kick_away => Média de Chute Livre Fora (Falta Perigosa) (Jogo Inteiro)
+total_full_time_goalkeeper_saves => Total de Defesas Perigosas (Jogo Inteiro)
+avg_full_time_goalkeeper_saves => Média de Defesas Perigosas (Jogo Inteiro)
+avg_full_time_goalkeeper_saves_home => Média de Defesas Perigosas em Casa (Jogo Inteiro)
+avg_full_time_goalkeeper_saves_away => Média de Defesas Perigosas Fora (Jogo Inteiro)
+total_full_time_crosses => Total de Cruzamentos (Jogo Inteiro)
+avg_full_time_crosses => Média de Cruzamentos (Jogo Inteiro)
+avg_full_time_crosses_home => Média de Cruzamentos em Casa (Jogo Inteiro)
+avg_full_time_crosses_away => Média de Cruzamentos Fora (Jogo Inteiro)
+total_full_time_interceptions => Total de Inteceptações (Roubadas de Bola) (Jogo Inteiro)
+avg_full_time_interceptions => Média de Inteceptações (Roubadas de Bola) (Jogo Inteiro)
+avg_full_time_interceptions_home => Média de Inteceptações (Roubadas de Bola) em Casa (Jogo Inteiro)
+avg_full_time_interceptions_away => Média de Inteceptações (Roubadas de Bola) (Jogo Inteiro)
+total_full_time_penality_kick => Total de Penaltis (Jogo Inteiro)
+avg_full_time_penality_kick => Média de Penaltis (Jogo Inteiro)
+avg_full_time_penality_kick_home => Média de Penaltis em Casa (Jogo Inteiro)
+avg_full_time_penality_kick_away => Média de Penaltis Fora (Jogo Inteiro)
+total_full_time_passes => Total de Passes (Jogo Inteiro)
+avg_full_time_passes => Média de Passes  (Jogo Inteiro)
+avg_full_time_passes_home => Média de Passes em Casa (Jogo Inteiro)
+avg_full_time_passes_away => Média de Passes Fora (Jogo Inteiro)
+total_full_time_passes_sucess => Total de Passes Certo (Jogo Inteiro)
+avg_full_time_passes_sucess => Média de Passes Certo (Jogo Inteiro)
+avg_full_time_passes_sucess_home => Média de Passes Certo em Casa (Jogo Inteiro)
+avg_full_time_passes_sucess_away => Média de Passes Certo Fora (Jogo Inteiro)
+total_full_time_passes_failed => Total de Passes Errado (Jogo Inteiro)
+avg_full_time_passes_failed => Média de Passes Errado (Jogo Inteiro)
+avg_full_time_passes_failed_home => Média de Passes Errado em Casa (Jogo Inteiro)
+avg_full_time_passes_failed_away => Média de Passes Errado Fora (Jogo Inteiro)
+avg_full_time_possession_ball = > Média (%) de Posse de Bola (Jogo Inteiro)
+avg_full_time_possession_ball_home = > Média (%) de Posse de Bola em Casa (Jogo Inteiro)
+avg_full_time_possession_ball_away = > Média (%) de Posse de Bola Fora (Jogo Inteiro)
+total_half_time_shots => Total de Chutes (Metade do Jogo)
+avg_half_time_shots => Média de Chutes (Metade do Jogo)
+avg_half_time_shots_home => Média de Chutes em Casa (Metade do Jogo)
+avg_half_time_shots_away => Média de Chutes Fora (Metade do Jogo)
+total_half_time_assists => Total de Assitências (Metade do Jogo)
+avg_half_time_assists => Média de Assitências (Metade do Jogo)
+avg_half_time_assists_home => Média de Assitências em Casa (Metade do Jogo)
+avg_half_time_assists_away => Média de Assitências Fora (Metade do Jogo)
+total_half_time_corner_kick => Total de Escanteios (Metade do Jogo)
+avg_half_time_corner_kick => Média de Escanteios (Metade do Jogo)
+avg_half_time_corner_kick_home => Média de Escanteios em Casa (Metade do Jogo)
+avg_half_time_corner_kick_away => Média de Escanteios Fora (Metade do Jogo)
+total_half_time_fouls_offsides => Total de faltas recebidas (Metade do Jogo)
+avg_half_time_fouls_offsides => Média de faltas recebidas (Metade do Jogo)
+avg_half_time_fouls_offsides_home => Média de faltas recebidas em Casa (Metade do Jogo)
+avg_half_time_fouls_offsides_away => Média de faltas recebidas Fora (Metade do Jogo)
+total_half_time_fouls_committed => Total de faltas cometidas (Metade do Jogo)
+avg_half_time_fouls_committed => Média de faltas cometidas (Metade do Jogo)
+avg_half_time_fouls_committed_home => Total de faltas cometidas em Casa (Metade do Jogo)
+avg_half_time_fouls_committed_away => Total de faltas cometidas Fora (Metade do Jogo)
+total_half_time_yellow_card => Total de cartões amarelos (Metade do Jogo)
+avg_half_time_yellow_card => Média de cartões amarelos (Metade do Jogo)
+avg_half_time_yellow_card_home => Média de cartões amarelos em Casa (Metade do Jogo)
+avg_half_time_yellow_card_away => Média de cartões amarelos Fora (Metade do Jogo)
+total_half_time_red_card => Total de cartões vermelhos (Metade do Jogo)
+avg_half_time_red_card => Média de cartões vermelhos (Metade do Jogo)
+avg_half_time_red_card_home => Média de cartões vermelhos em Casa (Metade do Jogo)
+avg_half_time_red_card_away => Média de cartões vermelhos Fora (Metade do Jogo)
+total_half_time_free_kick => Total de Chute Livre (Falta Perigosa) (Metade do Jogo)
+avg_half_time_free_kick => Média de Chute Livre (Falta Perigosa) (Metade do Jogo)
+avg_half_time_free_kick_home => Média de Chute Livre em Casa (Falta Perigosa) (Metade do Jogo)
+avg_half_time_free_kick_away => Média de Chute Livre Fora (Falta Perigosa) (Metade do Jogo)
+total_half_time_goalkeeper_saves => Total de Defesas Perigosas (Metade do Jogo)
+avg_half_time_goalkeeper_saves => Média de Defesas Perigosas (Metade do Jogo)
+avg_half_time_goalkeeper_saves_home => Média de Defesas Perigosas em Casa (Metade do Jogo)
+avg_half_time_goalkeeper_saves_away => Média de Defesas Perigosas Fora (Metade do Jogo)
+total_half_time_crosses => Total de Cruzamentos (Metade do Jogo)
+avg_half_time_crosses => Média de Cruzamentos (Metade do Jogo)
+avg_half_time_crosses_home => Média de Cruzamentos em Casa (Metade do Jogo)
+avg_half_time_crosses_away => Média de Cruzamentos Fora (Metade do Jogo)
+total_half_time_interceptions => Total de Inteceptações (Roubadas de Bola) (Metade do Jogo)
+avg_half_time_interceptions => Média de Inteceptações (Roubadas de Bola) (Metade do Jogo)
+avg_half_time_interceptions_home => Média de Inteceptações (Roubadas de Bola) em Casa (Metade do Jogo)
+avg_half_time_interceptions_away => Média de Inteceptações (Roubadas de Bola) (Metade do Jogo)
+total_half_time_penality_kick => Total de Penaltis (Metade do Jogo)
+avg_half_time_penality_kick => Média de Penaltis (Metade do Jogo)
+avg_half_time_penality_kick_home => Média de Penaltis em Casa (Metade do Jogo)
+avg_half_time_penality_kick_away => Média de Penaltis Fora (Metade do Jogo)
+total_half_time_passes => Total de Passes (Metade do Jogo)
+avg_half_time_passes => Média de Passes  (Metade do Jogo)
+avg_half_time_passes_home => Média de Passes em Casa (Metade do Jogo)
+avg_half_time_passes_away => Média de Passes Fora (Metade do Jogo)
+total_half_time_passes_sucess => Total de Passes Certo (Metade do Jogo)
+avg_half_time_passes_sucess => Média de Passes Certo (Metade do Jogo)
+avg_half_time_passes_sucess_home => Média de Passes Certo em Casa (Metade do Jogo)
+avg_half_time_passes_sucess_away => Média de Passes Certo Fora (Metade do Jogo)
+total_half_time_passes_failed => Total de Passes Errado (Metade do Jogo)
+avg_half_time_passes_failed => Média de Passes Errado (Metade do Jogo)
+avg_half_time_passes_failed_home => Média de Passes Errado em Casa (Metade do Jogo)
+avg_half_time_passes_failed_away => Média de Passes Errado Fora (Metade do Jogo)
+avg_half_time_possession_ball = > Média (%) de Posse de Bola (Metade do Jogo)
+avg_half_time_possession_ball_home = > Média (%) de Posse de Bola em Casa (Metade do Jogo)
+avg_half_time_possession_ball_away = > Média (%) de Posse de Bola Fora (Metade do Jogo)
+
+############################################################################
+
+tb_match
+id_match
+id_league
+season
+date
+time
+id_home_team = ID Home Team
+name_home_team = Name Home Team
+formation_home_team = Formation Home Team
+coach_home_team = Treinador Home Team
+pos_league_home_team => Position in League
+result1_home_team => Ultimo Resultado do Time da Casa (W, D, L)
+result2_home_team => Ultimo Resultado - 1 do Time da Casa (W, D, L)
+result3_home_team => Ultimo Resultado - 2 do Time da Casa (W, D, L)
+result4_home_team => Ultimo Resultado - 3 do Time da Casa (W, D, L)
+result5_home_team => Ultimo Resultado - 4 do Time da Casa (W, D, L)
+id_away_team = Away Team
+name_away_team = Name Away Team
+formation_away_team = Formation Away Team
+coach_away_team = Treinador Away Team
+pos_league_away_team => Position in League
+result1_away_team => Ultimo Resultado do Time de Fora (W, D, L)
+result2_away_team => Ultimo Resultado - 1 do Time de Fora (W, D, L)
+result3_away_team => Ultimo Resultado - 2 do Time de Fora (W, D, L)
+result4_away_team => Ultimo Resultado - 3 do Time de Fora (W, D, L)
+result5_away_team => Ultimo Resultado - 4 do Time de Fora (W, D, L)
+referee = Juiz
+id_city_local = Id City of Match
+stadium = Estádio
+weather_min_temperature => Mínima Temperatura
+weather_max_temperature => Máxima Temperatura
+weather_humidity => Umidade (%)
+weather_wind => Intensidade do Vento => exemplo: 19 Km/h
+weather_rain => Chuva (%)
+weather_condition => Ensolarado, Chuva, Nublado, Chuvas com trovoadas, etc
+dthrupdate
+
+
+############################################################################
+
+tb_match_player_by_minute
+id_match
+id_team
+formation_team = Formation Team
+id_player
+name_player
+time => 0 a 90 minutes
+id_player_substitute
+name_player_substitute
+ind_goal_scored
+ind_yellowcard
+ind_redcard
+ind_assist
+ind_shot
+ind_shot_goal
+ind_fouls_committed
+ind_fouls_received
+ind_cross
+ind_penality_kick
+ind_passes_sucess
+ind_passes_failed
+ind_corner_kick
+ind_possession_ball (%)
+
+############################################################################
+
+tb_match_possession_by_minute
+REGISTRAR A POSSE DE BOLA E SETORES MAIS FREQUENTES NO CAMPO
+
+
+############################################################################
+
+tb_player
+id_player
+name_player
+nick_player
+id_country
+date_birth
+height
+weight
+value
+geral
+potencial
+
+############################################################################
+
+tb_player_attribute
+id_player
+season
+crossing
+finishing
+heading
+short_passing
+volleys
+dribbling
+curve
+free_kick 
+long_passing
+ball_control
+acceleration
+sprint_speed
+agility
+reactions
+balance
+shot_power
+jumping
+stamina
+long_shots
+aggression
+interceptions
+positioning
+vision
+penalties
+composure
+marking
+standing_tackle
+sliding_tackle
+gk_diving
+gk_handling
+gk_kicking
+gk_positioning
+gk_reflexes
+dthr_update
+
+############################################################################
+
+tb_team_player
+id_team
+season
+id_player
+number
+position
+
+
+############################################################################
+
+
